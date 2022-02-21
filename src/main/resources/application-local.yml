@@ -1,0 +1,21 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /spring-skeleton
+
+info:
+  app:
+    name: Spring boot skeleton
+    description: This application have basic setup of springboot project
+
+spring:
+  ############# Datasource related configuration ###########
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/licious
+    username: root
+    password: 'Mysql@1997'
+  liquibase:
+    change-log: classpath:db/changelog/changelog-master.xml
+  jpa:
+    show-sql: true
