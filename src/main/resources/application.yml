@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  servlet:
+    contextPath: /pricing-service
+
+info:
+  app:
+    name: Pricing Service Application
+    description: This is pricing service springboot application.
+
+spring:
+  profiles:
+    active: local
+  ############# Datasource related configuration ###########
+  datasource:
+    url: 'jdbc:mysql://${pricing.mysql.host}:3306/licious'
+    username: '${pricing.mysql.username}'
+    password: '${pricing.mysql.password}'
+  liquibase:
+    change-log: 'classpath:/db.changelog/changelog-master.xml'
+  jpa:
+    show-sql: true
