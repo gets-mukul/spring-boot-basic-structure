@@ -1,21 +1,21 @@
 server:
   port: 8080
   servlet:
-    contextPath: /pricing-service
+    contextPath: /skeleton
 
 info:
   app:
-    name: Pricing Service Application
-    description: This is pricing service springboot application.
+    name: Spring project skeleton
+    description: This is project contains a basic structure of spring boot project
 
 spring:
   profiles:
     active: local
   ############# Datasource related configuration ###########
   datasource:
-    url: 'jdbc:mysql://${pricing.mysql.host}:3306/licious'
-    username: '${pricing.mysql.username}'
-    password: '${pricing.mysql.password}'
+    url: 'jdbc:mysql://${skeleton.mysql.host}:3306/skeleton'
+    username: '${skeleton.mysql.username}'
+    password: '${skeleton.mysql.password}'
   liquibase:
     change-log: 'classpath:/db.changelog/changelog-master.xml'
   jpa:
