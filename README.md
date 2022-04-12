@@ -10,6 +10,7 @@
 5. Swagger
 6. Integration tests
 7. Unit tests
+8. Docker compose
 
 ### How to run integration tests
 Integration tests uses testcontainer in which mysql will run inside a docker container
@@ -21,3 +22,8 @@ to run docker-compose.xml
 
 ### How to use swagger
 Run your server then swagger can be use [here](http://localhost:8080/skeleton/swagger-ui/index.html#/person-controller/createPerson)
+
+### How to use Sonarqube
+```shell
+mvn clean verify sonar:sonar -Dsonar.projectKey=${project-key} -Dsonar.host.url=${sonar-host-url} -Dsonar.login=${token}
+```
